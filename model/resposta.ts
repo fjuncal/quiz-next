@@ -1,12 +1,20 @@
 export default class RespostaModel {
-  #valor?: number;
+  #valor?: string;
   #certa?: boolean;
   #revelada?: boolean;
 
-  constructor(valor: number, certa: boolean, revelada = false) {
+  constructor(valor: string, certa: boolean, revelada = false) {
     this.#valor = valor;
     this.#certa = certa;
     this.#revelada = revelada;
+  }
+
+  static certa(valor: string) {
+    return new RespostaModel(valor, true);
+  }
+
+  static errada(valor: string) {
+    return new RespostaModel(valor, false);
   }
 
   get valor() {
