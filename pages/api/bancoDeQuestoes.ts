@@ -24,6 +24,28 @@ const questoes: QuestaoModel[] = [
     ],
     false
   ),
+  new QuestaoModel(
+    203,
+    'Qual é o coletivo de cães"?',
+    [
+      RespostaModel.errada("Manda"),
+      RespostaModel.errada("Alcateia"),
+      RespostaModel.errada("Rebanho"),
+      RespostaModel.certa("Matilha"),
+    ],
+    false
+  ),
+  new QuestaoModel(
+    204,
+    'Qual é o triângulo que tem todos os lados diferentes"?',
+    [
+      RespostaModel.errada("Equilátero"),
+      RespostaModel.errada("Isóceles"),
+      RespostaModel.errada("Trapézio"),
+      RespostaModel.certa("Escaleno"),
+    ],
+    false
+  ),
 ];
 
 export default questoes;
