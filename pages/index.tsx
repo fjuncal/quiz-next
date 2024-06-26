@@ -16,7 +16,16 @@ export default function Home() {
 
   return (
     <>
-      <Questao valor={questaoTeste} />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          height: "100vh",
+          alignItems: "center",
+        }}
+      >
+        <Questao valor={questaoTeste} />
+      </div>
     </>
   );
 }
