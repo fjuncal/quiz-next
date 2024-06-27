@@ -1,6 +1,7 @@
 import Questao from "@/components/Questao";
 import QuestaoModel from "@/model/questao";
 import RespostaModel from "@/model/resposta";
+import { log } from "console";
 export default function Home() {
   const questaoTeste = new QuestaoModel(
     1,
@@ -14,6 +15,10 @@ export default function Home() {
     false
   );
 
+  function respostaFornecida(indice: number) {
+    console.log(indice);
+  }
+
   return (
     <>
       <div
@@ -24,7 +29,7 @@ export default function Home() {
           alignItems: "center",
         }}
       >
-        <Questao valor={questaoTeste} />
+        <Questao valor={questaoTeste} respostaFornecida={respostaFornecida} />
       </div>
     </>
   );
