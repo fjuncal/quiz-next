@@ -44,7 +44,7 @@ export default function Home() {
           respostaFornecida={respostaFornecida}
           tempoEsgotado={tempoEsgotado}
         />
-        <Botao texto="Próxima" />
+        <Botao texto="Próxima" href="/resultado" />
       </div>
     </>
   );
