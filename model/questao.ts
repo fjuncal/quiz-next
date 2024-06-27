@@ -74,12 +74,7 @@ export default class QuestaoModel {
     const respostas = obj.respostas?.map((resp) =>
       RespostaModel.criarUsandoJson(resp)
     );
-    return new QuestaoModel(
-      obj.#id!,
-      obj.#enunciado!,
-      respostas!,
-      obj.#acertou!
-    );
+    return new QuestaoModel(obj.id!, obj.enunciado!, respostas!, obj.acertou!);
   }
 
   paraObjeto() {

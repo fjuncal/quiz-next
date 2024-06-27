@@ -34,7 +34,7 @@ export default class RespostaModel {
   }
 
   static criarUsandoJson(obj: RespostaModel): RespostaModel {
-    return new RespostaModel(obj.#valor!, obj.#certa!, obj.#revelada);
+    return new RespostaModel(obj.valor!, obj.certa!, obj.revelada);
   }
 
   paraObjeto() {
