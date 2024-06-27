@@ -21,7 +21,9 @@ export default function Home() {
     setQuestao(questao.responderCom(indice));
   }
   function tempoEsgotado() {
-    setQuestao(questao.responderCom(-1));
+    if (questao.naoRespondida) {
+      setQuestao(questao.responderCom(-1));
+    }
   }
 
   return (
@@ -36,6 +38,7 @@ export default function Home() {
       >
         <Questao
           valor={questao}
+          tempoPraResposta={5}
           respostaFornecida={respostaFornecida}
           tempoEsgotado={tempoEsgotado}
         />
