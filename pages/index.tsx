@@ -57,7 +57,13 @@ export default function Home() {
     carregarQuestao(proximoId);
   }
   function finalizar() {
-    router.push("/resultado");
+    router.push({
+      pathname: "/resultado",
+      query: {
+        total: idsDasQuestoes.length,
+        certas: respostasCertas,
+      },
+    });
   }
 
   return (
