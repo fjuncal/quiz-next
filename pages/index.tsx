@@ -20,6 +20,9 @@ export default function Home() {
     console.log(indice);
     setQuestao(questao.responderCom(indice));
   }
+  function tempoEsgotado() {
+    setQuestao(questao.responderCom(-1));
+  }
 
   return (
     <>
@@ -31,7 +34,11 @@ export default function Home() {
           alignItems: "center",
         }}
       >
-        <Questao valor={questao} respostaFornecida={respostaFornecida} />
+        <Questao
+          valor={questao}
+          respostaFornecida={respostaFornecida}
+          tempoEsgotado={tempoEsgotado}
+        />
       </div>
     </>
   );
