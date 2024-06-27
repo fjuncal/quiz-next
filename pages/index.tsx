@@ -50,7 +50,21 @@ export default function Home() {
     const acertou = questaoRespondida.acertou;
     setRespostasCertas(respostasCertas + (acertou ? 1 : 0));
   }
-  function irPraProximoPasso() {}
+
+  function idProximaPergunta() {
+    const proximoIndice = idsDasQuestoes.indexOf(questao.id!) + 1;
+    return idsDasQuestoes[proximoIndice];
+  }
+
+  function irPraProximoPasso() {
+    const proximoId = idProximaPergunta();
+    proximoId ? irPraProximaQuestao(proximoId) : finalizar();
+  }
+
+  function irPraProximaQuestao(proximoId: number) {
+    carregarQuestao(proximoId);
+  }
+  function finalizar() {}
 
   return (
     <>
